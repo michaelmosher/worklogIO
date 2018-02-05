@@ -10,7 +10,7 @@ import qualified Jira
 
 main :: IO ()
 main = do
-    jCfg <- T.readFile "./app/worklogIO.ini"
+    jCfg <- T.readFile "./worklogIO.ini"
     case parseIniFile jCfg Jira.configParser of
         Left s -> do
             putStrLn s
